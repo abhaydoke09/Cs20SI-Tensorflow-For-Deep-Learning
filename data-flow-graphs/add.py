@@ -16,3 +16,13 @@ print sess.run(b)
 print sess.run(c)
 
 sess.close()
+
+'''
+to avoid using sess.close() we can use the with statement
+'''
+
+with tf.Session() as sess:
+  print sess.run(a)
+  print sess.run(b)
+  print sess.run(c)
+
