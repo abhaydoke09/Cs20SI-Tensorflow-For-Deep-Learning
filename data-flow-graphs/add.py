@@ -1,28 +1,21 @@
-import tensorflow as tf
+import tensorflow as tf 
 
-a = tf.add(3,5)
-print a
-
-b = tf.add(4.8,9.2)
-print b
-
-c = tf.add(123, 456)
-print c
+int_add = tf.add(3,4)
+float_add = tf.add(5,6)
 
 sess = tf.Session()
 
-print sess.run(a)
-print sess.run(b)
-print sess.run(c)
+print sess.run(int_add)
+print sess.run(float_add)
 
 sess.close()
+
 
 '''
 to avoid using sess.close() we can use the with statement
 '''
 
 with tf.Session() as sess:
-  print sess.run(a)
-  print sess.run(b)
-  print sess.run(c)
+	print sess.run(float_add)
+	print sess.run(int_add)
 
