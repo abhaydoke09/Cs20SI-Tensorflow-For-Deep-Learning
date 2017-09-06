@@ -8,6 +8,6 @@ y = tf.multiply(a,b, name="elementwise_multiplication")
 
 
 with tf.Session() as sess:
-	print sess.run(y)
-
+	print sess.run(tf.zeros(x.shape))
+	print sess.run(tf.zeros_like(x))
 
